@@ -1,8 +1,8 @@
 {
-  "san-francisco": {
+  "buenos-aires": {
     "viewState": {
-      "longitude": -122.4192016,
-      "latitude": 37.7751543,
+      "longitude": -58.44467249080664,
+      "latitude": -34.59485155050502,
       "zoom": 13,
       "pitch": 0,
       "bearing": 0
@@ -22,7 +22,7 @@
   "seattle": {
     "sourceIndex": 164774,
     "viewState": {
-     "latitude": 47.6098543,
+      "latitude": 47.6098543,
       "longitude": -122.3350119,
       "zoom": 13,
       "pitch": 0,
