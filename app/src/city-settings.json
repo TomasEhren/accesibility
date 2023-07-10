@@ -1,42 +1,12 @@
 {
   "buenos-aires": {
     "viewState": {
-      "longitude": -58.44467249080664,
-      "latitude": -34.59485155050502,
-      "zoom": 13,
+      "longitude": -58.4,
+      "latitude": -34.595,
+      "zoom": 11.8,
       "pitch": 0,
       "bearing": 0
     },
     "sourceIndex": 311
-  },
-  "new-york": {
-    "sourceIndex": 58689,
-    "viewState": {
-      "longitude": -73.9963128,
-      "latitude": 40.7512821,
-      "zoom": 13,
-      "pitch": 0,
-      "bearing": 0
-    }
-  },
-  "seattle": {
-    "sourceIndex": 164774,
-    "viewState": {
-      "latitude": 47.6098543,
-      "longitude": -122.3350119,
-      "zoom": 13,
-      "pitch": 0,
-      "bearing": 0
-    }
-  },
-  "nairobi": {
-    "sourceIndex": 66128,
-    "viewState": {
-      "longitude": 36.8382651,
-      "latitude": -1.2575046,
-      "zoom": 13,
-      "pitch": 0,
-      "bearing": 0
-    }
   }
 }

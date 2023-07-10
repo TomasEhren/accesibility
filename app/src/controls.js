@@ -2,32 +2,29 @@ import React from "react";
 import { Select } from "baseui/select";
 import { Block } from "baseui/block";
 import { FormControl } from "baseui/form-control";
-import { Slider } from "baseui/slider";
+// import { Slider } from "baseui/slider";
+import Slider from "@mui/material/Slider";
 
-const cities = [
-  { value: "cincinnati", label: "Cincinnati" },
-  { value: "london", label: "London" },
-  { value: "nairobi", label: "Nairobi" },
-  { value: "new-york", label: "New York" },
-  { value: "buenos-aires", label: "Buenos Aires" },
-  { value: "seattle", label: "Seattle" },
-];
-
-const mapTypes = [
-  { value: 0, label: "Base Map" },
-  { value: 1, label: "Node Distance" },
-  { value: 2, label: "Average Speed" },
-  { value: 3, label: "Isochronic Map" },
-];
-
-const Controls = ({
-  city,
-  mapType,
-  setMapType,
-  minutes,
-  setMinutes,
-  setCity,
-}) => (
+const cities = [{ value: "buenos-aires", label: "Buenos Aires" }];
+/*
+const old_slider = (
+  <Slider
+    min={5}
+    max={60}
+    step={5}
+    value={[minutes]}
+    onChange={({ value }) => {
+      setMinutes(Number(value));
+      console.log(value);
+    }}
+    onFinalChange={(e) => console.log(e)}
+  />
+);
+*/
+const valuetext = (value) => {
+  return `${value}°C`;
+};
+const Controls = ({ city, minutes, setMinutes, setCity }) => (
   <Block
     className="controls"
     style={{
@@ -52,27 +49,19 @@ const Controls = ({
         }}
       />
     </FormControl>
-    <FormControl label="Map Type">
-      <Select
-        value={[mapTypes.find((d) => d.value === mapType)]}
-        clearable={false}
-        options={mapTypes}
-        labelKey="label"
-        valueKey="value"
-        onChange={({ value }) => {
-          setMapType(value[0].value);
-        }}
-      />
-    </FormControl>
 
-    <FormControl label="Minutes">
+    <FormControl label="Travelled Minutes">
       <Slider
-        min={0}
+        aria-label="Temperature"
+        defaultValue={minutes}
+        valueLabelDisplay="auto"
+        onChangeCommitted={(info, value) => {
+          console.log(value);
+        }}
+        step={5}
+        marks
+        min={5}
         max={60}
-        step={1}
-        value={[minutes]}
-        onChange={({ value }) => setMinutes(Number(value))}
-        onFinalChange={({ value }) => console.log(value)}
       />
     </FormControl>
   </Block>

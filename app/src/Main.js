@@ -16,7 +16,7 @@ const initialState = {
   filteredGraph: {},
   city: "buenos-aires",
   ...citySettings["buenos-aires"],
-  minutes: 0,
+  minutes: 15,
   mapType: 1,
   loaded: false,
 };
